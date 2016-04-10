@@ -19,7 +19,8 @@ public class Controller {
 		User_Interface ui = new User_Interface();
 		ui.displayOptions();
 		int choice = ui.getUserInput();
-		util.createEmail(choice);
+		String attackFile = util.createEmail(choice,"Temp","Mike Simister");
+		ui.openBrowser(attackFile);
 		//String temp = infile.getAbsolutePath().replace("\\", "/");
 		//ui.openBrowser(temp);
 	

@@ -63,7 +63,7 @@ public class User_Interface {
 				// Do a best guess on unix until we get a platform independent
 				// way
 				// Build a list of browsers to try, in this order.
-				String[] browsers = { "epiphany", "firefox", "mozilla",
+				String[] browsers = { "firefox", "chrome",
 						"konqueror", "netscape", "opera", "links", "lynx" };
 
 				// Build a command string which looks like

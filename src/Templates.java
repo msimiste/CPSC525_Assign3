@@ -2,9 +2,9 @@
 public class Templates {
 	String[] templates = new String[11];
 	public Templates(){
-		templates[1] = "Template1_Levelup.html";
-		templates[2] = "Template 2";
-		templates[3] = "Template 3";
+		templates[1] = "";
+		templates[2] = "Template2_Levelup.html";
+		templates[3] = "Template3_Shaw.html";
 		templates[4] = "Template 4";
 		templates[5] = "Template 4";
 		templates[6] = "Template 6";
