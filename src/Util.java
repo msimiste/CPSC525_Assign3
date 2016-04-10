@@ -38,6 +38,14 @@ public class Util {
 		User_Interface ui = new User_Interface();
 
 		switch (template) {
+		case 1:
+		{
+			String sender;
+			String receiver;
+			String Date;
+			
+			
+		}
 		case 2:
 		{
 			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
