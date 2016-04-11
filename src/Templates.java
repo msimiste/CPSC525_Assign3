@@ -1,21 +1,37 @@
-
 public class Templates {
-	String[] templates = new String[11];
-	public Templates(){
-		templates[1] = "";
-		templates[2] = "Template2_Levelup.html";
-		templates[3] = "Template3_Shaw.html";
-		templates[4] = "Template 4";
-		templates[5] = "Template 4";
-		templates[6] = "Template 6";
-		templates[7] = "Template 7";
-		templates[8] = "Template 8";
-		templates[9] = "Template 9";
-		templates[10] = "Template 10";
-		}
-	
-	public String getName(int n){
+
+	Template[] templates = new Template[11];
+
+	public Templates() {
+		createTemplates();
+	}
+
+	public Template getTemplate(int n) {
 		return templates[n];
-		
+
+	}
+
+	private void createTemplates() {
+		templates[1] = new Template("", "Robin Gonzalez",
+				"someone@ucalgary.ca", "gonzalre@ucalgary.ca",
+				"Template1_Robin.html", 1, "Robin Gonzalez Attack");
+		templates[2] = new Template("", "", "", "", "Template2_Levelup.html",
+				2, "Level Up Attack");
+		templates[3] = new Template("", "", "", "", "Template3_Shaw.html", 3,
+				"Shaw Attack");
+		templates[4] = new Template("", "", "", "", "Template4_Twitter.html",
+				4, "Twitter Attack");
+		templates[5] = new Template("", "", "", "",
+				"Template5_TennisExpress.html", 5, "Tennis Express Attack");
+		templates[6] = new Template("", "", "", "", "Template6_Coursera.html",
+				6, "Coursera Attack");
+		templates[7] = new Template("", "", "", "", "Template1_Robin.html", 7,
+				"temp");
+		templates[8] = new Template("", "", "", "", "Template1_Robin.html", 8,
+				"temp");
+		templates[9] = new Template("", "", "", "", "Template1_Robin.html", 9,
+				"temp");
+		templates[10] = new Template("", "", "", "", "Template1_Robin.html",
+				10, "temp");
 	}
 }

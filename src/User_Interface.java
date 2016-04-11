@@ -3,47 +3,96 @@ import java.util.Scanner;
 public class User_Interface {
 
 	Templates t;
+	Template[] temps;
 
 	public User_Interface() {
 		t = new Templates();
+		temps = t.templates;
 	}
 
 	public void displayOptions() {
 
 		System.out.println("Enter the Number to Choose an Option\n");
-		System.out.println("Option (1): " + t.getName(1));
-		System.out.println("Option (2): " + t.getName(2));
-		System.out.println("Option (3): " + t.getName(3));
-		System.out.println("Option (4): " + t.getName(4));
-		System.out.println("Option (5): " + t.getName(5));
-		System.out.println("Option (6): " + t.getName(6));
-		System.out.println("Option (7): " + t.getName(7));
-		System.out.println("Option (8): " + t.getName(8));
-		System.out.println("Option (9): " + t.getName(9));
-		System.out.println("Option (10): " + t.getName(10));
+
+		for (int i = 1; i < temps.length; i++) {
+			System.out.println("Option (" + i + "): " + temps[i].getDispName());
+		}
+	
 		System.out.print("\nYour Choice: ");
 	}
 
-	public int getUserInput() {
+	public void initialMessage() {
+		String greeting = "Deep C Phishing";
+
+		for (int i = 0; i < 3; i++) {
+
+			for (int j = 0; j < greeting.length(); j++) {
+				if (i == 1 && j == 0) {
+					System.out.println(greeting);
+				} else if (i != 1) {
+					System.out.print("*");
+				}
+			}
+			if(i!=1){
+				System.out.println();
+			}
+		}
+
+	}
+
+	public int getUserInputTemplate() {
 		Scanner in = new Scanner(System.in);
-		int temp = in.nextInt();
-		in.close();
+		int temp = Integer.parseInt(in.nextLine());
 		return temp;
 	}
 
+	public String getUserInputString() {
+		Scanner in = new Scanner(System.in);
+		String temp = "";
+		if (in.hasNext()) {
+			temp = in.nextLine();
+		} else {
+			temp = in.next();
+		}
+
+		return temp;
+	}
+
+	public void askSender() {
+
+		System.out.print("Sender Name: ");
+	}
+	
+	public void askSenderFemale() {
+
+		System.out.print("Enter Female Sender Name: ");
+	}
+	
+	public void askSenderMale() {
+
+		System.out.print("Enter Male Sender Name: ");
+	}
+
+	public void askSendEmail() {
+		System.out.println("Sender Email: ");
+	}
+
+	public void askReciever() {
+		System.out.println();
+		System.out.print("Receiver Name: ");
+	}
+
+	public void askRecEmail() {
+		System.out.println("Reciever Email: ");
+	}
+
+	public void askGender() {
+		System.out.println("Reciever's Gender? (F=female, M=male): ");
+	}
+
 	public void openBrowser(String url) {
+
 		
-		
-		//String os = System.getProperty("os.name");
-		//Document d = Jsoup.parse(infile,"ISO-8859-1");	
-		
-	/*	if(Desktop.isDesktopSupported())
-		{
-		  Desktop.getDesktop().browse(new URI(temp));
-		}*/
-		
-		
-		// String url = "http://www.google.com";
 		String os = System.getProperty("os.name").toLowerCase();
 		Runtime rt = Runtime.getRuntime();
 
@@ -63,8 +112,8 @@ public class User_Interface {
 				// Do a best guess on unix until we get a platform independent
 				// way
 				// Build a list of browsers to try, in this order.
-				String[] browsers = { "firefox", "chrome",
-						"konqueror", "netscape", "opera", "links", "lynx" };
+				String[] browsers = { "firefox", "chrome", "konqueror",
+						"netscape", "opera", "links", "lynx" };
 
 				// Build a command string which looks like
 				// "browser1 "url" || browser2 "url" ||..."
@@ -81,6 +130,5 @@ public class User_Interface {
 		} catch (Exception e) {
 			return;
 		}
-
 	}
 }

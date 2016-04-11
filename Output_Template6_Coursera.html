@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+ </head>
+ <body>
+  <style type="text/css">/***** RESET STYLES ******/
+body, #bodyTable, #bodyCell {
+  height:100% !important;
+  margin:0;
+  padding:0;
+  width:100% !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+}
+p {
+  margin: 1em 0;
+}
+
+/****** CLIENT-SPECIFIC STYLES ******/
+/* Stops email clients resizing small text. */
+* {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.ReadMsgBody {
+  width:100%;
+}
+/* Forces Outlook.com to display emails full width. */
+.ExternalClass {
+  width:100%;
+}
+/* Fixes Outlook.com line height. */
+.ExternalClass, .ExternalClass * {
+  line-height:100%;
+}
+/* Stops Outlook from adding extra spacing to tables. */
+table, td {
+  mso-table-lspace:0pt;
+  mso-table-rspace:0pt;
+}
+/* Fixes webkit padding issue. */
+table {
+  border-spacing:0 !important;
+}
+/* Fix for Yahoo mail table alignment bug. */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+/* Remove spacing between tables in Outlook 2007 and up. */
+#outlook a {
+  padding:0;
+}
+/* Force Outlook 2007 and up to provide a "view in browser" message. */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+/* Overrides styles added when Yahoo's auto-senses a link. */
+.preheaderContent div a:link, .preheaderContent div a:visited, .preheaderContent div a .yshortcuts {
+    color: #3b6e8f;
+    font-weight:normal;
+    text-decoration:underline;
+}
+.yshortcuts a {
+  border-bottom: none !important;
+}
+
+/* Overrides blue, underlined link auto-detected by iOS Mail. */
+/* Create a class for every link style needed; this template needs only one for the link in the footer. */
+.appleBody a {
+    color:#68440A;
+    text-decoration: none;
+}
+.appleFooter a {
+    color:#999999;
+    text-decoration: none;
+}
+
+/* Overrides styles added images. */
+img, a img {
+  border:0 !important;
+  outline:none !important;
+  text-decoration:none !important;
+}
+
+/****** MOBILE STYLES ******/
+/* Media Queries */
+@media screen and (max-device-width: 600px), screen and (max-width: 600px) {
+
+  /* Overrides email-container's desktop width and forces it into a 100% fluid width. */
+  .email-container {
+    width: 100% !important;
+  }
+
+  /* Forces images to resize to the width of their container. */
+  img[class="fluid"],
+  img[class="fluid-centered"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: auto !important;
+  }
+  /* And center justify these ones. */
+  img[class="fluid-centered"] {
+    margin: auto !important;
+  }
+
+  /* Forces table cells into full-width rows. */
+  td[class="stack-column"],
+  td[class="stack-column-center"] {
+    display: block !important;
+    width: 100% !important;
+    direction: ltr !important;
+  }
+  /* And center justify these ones. */
+  td[class="stack-column-center"] {
+    text-align: center !important;
+  }
+}</style>
+  <center>
+   <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8F8F8;" height="100%">
+    <tbody>
+     <tr>
+      <td valign="top" style="padding-top: 30px;" align="center">
+       <div class="preheaderContent" style="display:none; font-size:1px; color:#3E3E3E; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-hide: all;">
+        Courses and Specializations that we think match your interests.
+       </div>
+       <!--Email Body-->
+       <table class="email-container" border="0" cellpadding="0" cellspacing="0" width="600">
+        <!--Module Row-->
+        <tbody>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column-center" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.tKnnuppXewRMXQw7xszwSHYgJs3sWm3ZLueeB6vqs0U" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com/emails/coursera_logo.png?w=150&amp;h=22&amp;fit=scale" alt="Ready to learn something new?" style="padding:25px 20px 20px 15px;"></a></td>
+              <td class="stack-column-center" valign="middle" align="right"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.tKnnuppXewRMXQw7xszwSHYgJs3sWm3ZLueeB6vqs0U" style="text-decoration:none; color:#787878; border-right: 1px gray solid; padding-right: 8px;" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">My Courses</a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvY291cnNlcz91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.fiYq6qu7-I0jsoiPXUvW6k8k6vxMaBCk4UfAorPmhac" style="text-decoration:none; color:#787878; padding-left: 8px; padding-right: 15px;" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Course Catalog</a></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 40px 15px 0px 20px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><span style="letter-spacing:.6px; color: #B18767; font-size:24px; font-weight:400; padding-bottom:1%;">We have recommendations for you </span> <span style="letter-spacing:.6px; #3E3E3E; font-size:24px; font-weight:400; padding-bottoom:1%;">Mark</span><p style="font-size:15px; color:#3E3E3E; line-height:20px;">We combed our catalog and found courses and Specializations that we think match your interests. Browse our recommendations below, and start learning something new today.</p></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #F8F8F8; border: 0px none;">
+          <td valign="top" style="padding: 40px 15px 15px 20px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><span style="line-height:36px; letter-spacing:.5px; color: #3E3E3E; font-size:21px; font-weight:400; padding-bottom:1%;">Recommended Specializations</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL2lvcy1kZXZlbG9wbWVudD91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.-1s3HMbUK_k0_IB2l-WRaIJZcuaT_p-Yif2kHG0v9Xk" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d2j5ihb19pt1hq.cloudfront.net/sdp_page/s12n_logos/UCI_iOSdevelopment_Getty505637157.jpg?w=80&amp;h=80&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL2lvcy1kZXZlbG9wbWVudD91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.-1s3HMbUK_k0_IB2l-WRaIJZcuaT_p-Yif2kHG0v9Xk" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">iOS Development for Creative Entrepreneurs</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">University of California, Irvine • Available Now</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL3J1Ynktb24tcmFpbHM_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.ZGFum7pBd8ikPFZIah_3kiUePY0tac3SP4jvgwi5kxU" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d2j5ihb19pt1hq.cloudfront.net/sdp_page/s12n_logos/JHU_FullStackRubyonRails_Getty526055809.jpg?w=80&amp;h=80&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL3J1Ynktb24tcmFpbHM_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.ZGFum7pBd8ikPFZIah_3kiUePY0tac3SP4jvgwi5kxU" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Ruby on Rails Web Development</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">Johns Hopkins University • Available Now</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL2Z1bGwtc3RhY2s_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.dQxfFIoC0HuZnW7e8MvQngzI6Zm7Y9yL4tHHF-n6Cm4" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d2j5ihb19pt1hq.cloudfront.net/sdp_page/s12n_logos/HKUST_Full-Stack-Web-Development_Getty488025987.jpg?w=80&amp;h=80&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL2Z1bGwtc3RhY2s_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.dQxfFIoC0HuZnW7e8MvQngzI6Zm7Y9yL4tHHF-n6Cm4" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Full Stack Web Development</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">The Hong Kong University of Science and Technology • Available Now</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL2FwcC1kZXZlbG9wbWVudD91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.aVMSUI1hhHj0KQLA04XfNcPifnsZnqLw417DFnz_9qE" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d2j5ihb19pt1hq.cloudfront.net/sdp_page/s12n_logos/Toronto_iOS-Development-with-Swift_CM48483.jpg?w=80&amp;h=80&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zL2FwcC1kZXZlbG9wbWVudD91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.aVMSUI1hhHj0KQLA04XfNcPifnsZnqLw417DFnz_9qE" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">iOS App Development with Swift</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">University of Toronto • Available Now</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #F8F8F8; border: 0px none;">
+          <td valign="top" style="padding: 40px 15px 15px 20px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvc3BlY2lhbGl6YXRpb25zP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.EulAZmo1jALy61_ETiHjBM9wLqDWxAc3Hcy1oQNKBGY" style="text-decoration: none; vertical-align:top; display:block; text-align: center;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><span style="font-size: 14px !important; width:60%; background-color: #2774d0; line-height: 50px; display: inline-block; color: #FFFFFF; border-radius: 1px; text-align: center;">View All Specializations</span></a></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #F8F8F8; border: 0px none;">
+          <td valign="top" style="padding: 40px 15px 15px 20px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><span style="line-height:36px; letter-spacing:.5px; color: #3E3E3E; font-size:21px; font-weight:400; padding-bottom:1%;">Recommended Courses</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vY3J5cHRvP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.83wuvvGMNX2SiIgOWRJJqBnJkMfypDSzwxhZmEPurWg" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera.s3.amazonaws.com/topics/crypto/large-icon.png?w=90&amp;h=90&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vY3J5cHRvP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.83wuvvGMNX2SiIgOWRJJqBnJkMfypDSzwxhZmEPurWg" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Cryptography I</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">Stanford University • Starts Apr 11, 2016</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vZ2FtZS1wcm9ncmFtbWluZz91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.ze6Q19NIBAw1t2180Bd7wdrUoH1rLT6mufWwGQH_1EM" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f4/fc7a006d2bafe837b6de5016d8a423/Course-Logo.png?w=90&amp;h=90&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vZ2FtZS1wcm9ncmFtbWluZz91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.ze6Q19NIBAw1t2180Bd7wdrUoH1rLT6mufWwGQH_1EM" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Beginning Game Programming with C#</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">University of Colorado System • Starts Apr 25, 2016</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvY291cnNlL2dncD91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.D5PRcnPyhz1-90gv8RWAS613QJDvLNwefuNQBrRTsRA" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/52/22e65c2ecc820ff1e6b0b42b789ab5/ggp.jpg?w=90&amp;h=90&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvY291cnNlL2dncD91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.D5PRcnPyhz1-90gv8RWAS613QJDvLNwefuNQBrRTsRA" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">General Game Playing</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">Stanford University • Starts Mar 28, 2016</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <tr style="background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+          <td valign="top" style="padding: 10px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td width="20%" valign="top" align="center"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vaW50ZXJhY3RpdmUtY29tcHV0ZXItZ3JhcGhpY3M_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.tgtiSc74GDfcs5Sk7T0BZt1o66pIm8e8_0QDQoOQlOk" style="text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img border="0" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/bd/fb88d0e9bc11e5abe1133ac5dcedb7/InteractiveComputerGraphics.png?w=90&amp;h=90&amp;fit=crop&amp;bg=FFF" alt="Placeholder image" width="100" style="padding-right: 10px;" align="center" height="90"></a></td>
+              <td width="80%" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvbGVhcm4vaW50ZXJhY3RpdmUtY29tcHV0ZXItZ3JhcGhpY3M_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.tgtiSc74GDfcs5Sk7T0BZt1o66pIm8e8_0QDQoOQlOk" style="font-size:16px; color: #4c4c4c; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Interactive Computer Graphics</a><br><span style="font-size:10px; color: #b18767; text-decoration:none; padding-right: 3px;">The University of Tokyo • Available Now</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #F8F8F8; border: 0px none;">
+          <td valign="top" style="padding: 40px 15px 15px 20px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvYnJvd3NlP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.bQYr1yFk_cgdpSwUNRBoySuSrd_kLRT65Wp8IMM5JG8" style="text-decoration: none; vertical-align:top; display:block; text-align: center;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><span style="font-size: 14px !important; width:60%; background-color: #2774d0; line-height: 50px; display: inline-block; color: #FFFFFF; border-radius: 1px; text-align: center;">View All Courses</span></a></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #FFFFFF; border-width: 1px 1px 0px 1px; border-style: solid; border-color: #DDDDDD;">
+          <td valign="top" style="padding: 25px 15px 0px 30px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><span style="letter-spacing:.6px; color: #3E3E3E; font-size:24px; padding-bottom:1%;">Download our App</span></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #FFFFFF; border-width: 0px 1px 0px 1px; border-style: solid; border-color: #DDDDDD;">
+          <td valign="top" style="padding: 10px 15px 10px 30px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL2l0dW5lcy5hcHBsZS5jb20vYXBwL2FwcGxlLXN0b3JlL2lkNzM2NTM1OTYxP2N0PU1vYmlsZSUyMFByb21vJTIwRW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmbXQ9OCZwdD0yMzM0MTUwJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0JnV0bV9tZWRpdW09ZW1haWwiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.qzHt56vSIFz0b95qEZeCSBcGmDIocPSSEISoMazU-Yg" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d2wvvaown1ul17.cloudfront.net/site-static/images/icons/download_from_apple.png?w=120&amp;h=40&amp;fit=scale" alt="coursera app for iphone"></a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3BsYXkuZ29vZ2xlLmNvbS9zdG9yZS9hcHBzL2RldGFpbHM_aWQ9b3JnLmNvdXJzZXJhLmFuZHJvaWQmdXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.-h7c0N7JtietkJeatYT2S1ssyD80SzlvPNAEp81_5cA" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/f9da1027fa76d939c8ff406822fe7ee79e787c72/images/icons/en_generic_rgb_wo_45.png?w=120&amp;h=40&amp;fit=scale" alt="coursera for android" style="padding-left: 3%;"></a></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #FFFFFF; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #DDDDDD;">
+          <td valign="top" style="padding: 10px 15px 10px 30px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" align="left"><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL2xlYXJuZXIuY291cnNlcmEuaGVscC8_dXRtX21lZGl1bT1lbWFpbCZ1dG1fc291cmNlPXJlY29tbWVuZGF0aW9ucyZ1dG1fY2FtcGFpZ249cmVjb21tZW5kYXRpb25zRW1haWwlN0VyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTclM0EzNCIsInRyYWNraW5nIjp7InVzZXJJZCI6ODU2ODUxNiwidXNlckVtYWlsIjoibWlrZXNpbWlzdGVyQHNoYXcuY2EiLCJub3RpZmljYXRpb25UeXBlIjoicmVjb21tZW5kYXRpb25zLnYyIiwiY2FtcGFpZ25JZCI6InJlY3NfZW1haWxfMjAxNl8wNF8wM18xNzozNCIsImNhbXBhaWduR3JvdXAiOiJyZWNvbW1lbmRhdGlvbnNFbWFpbCJ9fSwidXNlcklkIjo4NTY4NTE2fQ.KjlgDRheRwGeD1e52gYFxHPiGxDvwg2SfXhLRXu9ui4" style="color:#4278D3; text-decoration:none; font-size:14px; padding-right:5px;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Learner Help Center</a>| Please do not reply directly to this email</td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #F8F8F8; border: 1px solid #DDDDDD;">
+          <td valign="middle" style="padding: 5px 15px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" width="25%" valign="middle" style="padding: 0px 5px;" align="center"><p style="font-size:15px; color:#3E3E3E; line-height:20px;">Copyright © 2016, Coursera Inc.</p></td>
+              <td class="stack-column" width="35%" valign="middle" style="padding: 0px 5px;" align="center"><p style="font-size:15px; color:#3E3E3E; line-height:20px;">381 E. Evelyn Ave, Mountain View, CA 94041 USA</p></td>
+              <td class="stack-column" width="40%" valign="middle" style="padding: 0px 5px;" align="center"><p style="font-size:15px; color:#3E3E3E; line-height:20px;">Connect with us<br><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9jb3Vyc2VyYT91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.uZW-RjMMVKrPt1ieP3y3ai4Y-SL2Hb_nfAv4FSHUUxY" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com/emails/facebook.png" alt="Facebook" style="background-color: #AAAAAA; margin: 2px; width: 35px;"></a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwOi8vd3d3LnR3aXR0ZXIuY29tL2NvdXJzZXJhP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.z4klJ9h6q8llhehu90dAyYpHWFzJISjaa8N7moSaYoE" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com/emails/twitter.png" alt="Twitter" style="background-color: #AAAAAA; margin: 2px; width: 35px;"></a><a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3BsdXMuZ29vZ2xlLmNvbS8lMkJDb3Vyc2VyYS9wb3N0cz91dG1fbWVkaXVtPWVtYWlsJnV0bV9zb3VyY2U9cmVjb21tZW5kYXRpb25zJnV0bV9jYW1wYWlnbj1yZWNvbW1lbmRhdGlvbnNFbWFpbCU3RXJlY3NfZW1haWxfMjAxNl8wNF8wM18xNyUzQTM0IiwidHJhY2tpbmciOnsidXNlcklkIjo4NTY4NTE2LCJ1c2VyRW1haWwiOiJtaWtlc2ltaXN0ZXJAc2hhdy5jYSIsIm5vdGlmaWNhdGlvblR5cGUiOiJyZWNvbW1lbmRhdGlvbnMudjIiLCJjYW1wYWlnbklkIjoicmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3OjM0IiwiY2FtcGFpZ25Hcm91cCI6InJlY29tbWVuZGF0aW9uc0VtYWlsIn19LCJ1c2VySWQiOjg1Njg1MTZ9.v-tq4CjsO8puxjJqSLQANdW0_HoMxIUtEF_IW9-4NRI" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-misc.s3.amazonaws.com/emails/google-plus.png" alt="Google Plus" style="background-color: #AAAAAA; margin: 2px; width: 35px;"></a></p></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+         <!--Module Row-->
+         <tr style="background-color: #333333;">
+          <td valign="top" style="padding: 15px 15px 15px 30px;">
+           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+             <tr>
+              <td class="stack-column" valign="middle" style="font-size: 14px; color: #EFEFEF;" align="left">To opt-out of receiving personalized recommendations.<a href="https://eventing.coursera.org/redirectSigned/eyJrZXkiOiJlbWFpbC5saW5rLm9wZW4iLCJ2YWx1ZSI6eyJ1cmwiOiJodHRwczovL3d3dy5jb3Vyc2VyYS5vcmcvYWNjb3VudC91bnN1YnNjcmliZS9CZElVUDhLTGVUSmIxQXh2QS05NU4zR08zeWtpNTZJRUhBTFQxam5qdlpZRzd1d00tVkJsV01nUkhkNjVmczdNYXdNU0I2ZGE5dG12aGptRjRaRmlNQS5mN1lPNmZDX0dONjdPWTM4ZEg3MVFBLnZTRHZHSkIwbGpPM0JWWVhjTXFwT01KcWpiSzRNcmY4UWoxUVFxWDZNbkZKaWxSVW9QVmFBMjMxcko2UFNQS25ZR0lkNnNWOFJPc3ZyMm56TlRDRV82TWJaRDB3NnI1VS1meWFKZ0RCN2JHSVV0VjhScV9rMnFDQVR5V3d2eklvP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1yZWNvbW1lbmRhdGlvbnMmdXRtX2NhbXBhaWduPXJlY29tbWVuZGF0aW9uc0VtYWlsJTdFcmVjc19lbWFpbF8yMDE2XzA0XzAzXzE3JTNBMzQiLCJ0cmFja2luZyI6eyJ1c2VySWQiOjg1Njg1MTYsInVzZXJFbWFpbCI6Im1pa2VzaW1pc3RlckBzaGF3LmNhIiwibm90aWZpY2F0aW9uVHlwZSI6InJlY29tbWVuZGF0aW9ucy52MiIsImNhbXBhaWduSWQiOiJyZWNzX2VtYWlsXzIwMTZfMDRfMDNfMTc6MzQiLCJjYW1wYWlnbkdyb3VwIjoicmVjb21tZW5kYXRpb25zRW1haWwifX0sInVzZXJJZCI6ODU2ODUxNn0.KEbGyzIULkyr9TzqvI18W0yRB1f_mgO04dTQI6WGVNE" rel="nofollow" style="color:#EFEFEF; text-decoration:underline; padding-left: 1px" target="_blank" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Unsubscribe</a></td>
+             </tr>
+            </tbody>
+           </table></td>
+         </tr>
+        </tbody>
+       </table></td>
+     </tr>
+    </tbody>
+   </table>
+  </center>
+  <img src="https://eventing.coursera.org/img/zWNiMT-V0lOpEKEjCNl1LHFyU4ly4MwSsc8Yqo-KQccHTWYnNSRqFA-4nKXxmAqMwT4XAmEIUs9KG6rgYDA85g.1MWgN9NZ1FaXJ7kYiT-9PA.Pp379-GNsRFalyf0icBv1s6hTtP-C5BV_0iWo_0IW7CdGLLkn8Z4XBhqLxLY8A3TQAdUOzAUIIc1C73orbw8-TzB8ub_Cwzny7kCF9wXIH6_Rt5X90SVCLaIHzSaJb7x9TkUCBqQZ53oPdvn762oZXxmp9-ZrvLsahCD0fnLlc08GJClgGImeNXjpJ21g4fL8g4EapZhpqyLN4N10T4rDc-R7EsNCwmjuRIOQdifgm0K-ynCN1UHp5Q9UQ_cn5JbFmPtRz3pCTV6ftS6w3FE8ZD1BnXrgyqESRTq_bKpscIUcs-fXhYWR67T-v4ZRsignk5ipdPw3eL6PP-3O9umwA" border="0" width="1" height="1">
+ </body>
+</html>
