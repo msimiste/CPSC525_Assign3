@@ -1,13 +1,7 @@
-/*import java.awt.Desktop;
-import java.io.File;*/
 import java.io.IOException;
-//import java.net.URI;
 import java.net.URISyntaxException;
-/*import java.nio.charset.Charset;
-import java.util.Scanner;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;*/
+
 
 public class Controller {
 
