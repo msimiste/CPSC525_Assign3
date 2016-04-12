@@ -162,7 +162,9 @@ public class Util {
 			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
 			changeHrefs(d);
 			String temp = d.toString();
-			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+			
+			//replaceValues(temp,t);
+		for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
 				String toReplace = val.getKey();
 				String replacement = val.getValue();
 				

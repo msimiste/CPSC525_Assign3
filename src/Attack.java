@@ -74,21 +74,22 @@ public class Attack {
 			System.out.print("Enter Receiver's Email: ");
 			String recEmail = in.nextLine();
 			System.out.print("Enter Merchant Name: ");
-			String merchant = in.nextLine().toUpperCase();
-			System.out.println("Enter Price: ");
+			String merchant = in.nextLine();
+			String merchant2 = new String(merchant);
+			System.out.print("Enter Price: ");
 			String price = in.nextLine();
-			System.out.println("Enter Currency(ie USD or CAD etc): ");
+			System.out.print("Enter Currency(ie USD or CAD etc): ");
 			String currency = in.nextLine().toUpperCase(); 
 			System.out.print("Enter the Product: ");
 			String product = in.nextLine();
-			System.out.println("Enter areacode and phone# (format ###-###-####): ");
+			System.out.print("Enter areacode and phone# (format ###-###-####): ");
 			String phoneNum = in.nextLine();			
 			String curDate = util.getDate(1); 			
 			String date = util.getDate(2);
 			
 			tPlate.setRecEmail(recEmail);
-			tPlate.addReplaceValue("@MERCHANT@", merchant);
-			tPlate.addReplaceValue("@MERCHANTWEBSITE@", merchant.replace(" ",""));
+			tPlate.addReplaceValue("@MERCHANT@", merchant2.toUpperCase());
+			tPlate.addReplaceValue("@MERCHANTWEBSITE@", merchant2.replace(" ","").toLowerCase());
 			tPlate.addReplaceValue("@PRICE@",price);
 			tPlate.addReplaceValue("@CURRENCY@",currency);
 			tPlate.addReplaceValue("@CURRENTDATE@", curDate);
@@ -96,10 +97,9 @@ public class Attack {
 			tPlate.addReplaceValue("@PHONENUM@", phoneNum);		
 			tPlate.addReplaceValue("@RECEIVEREMAIL@",tPlate.getRecEmail());
 			tPlate.addReplaceValue("@RECEIVER@", tPlate.getRec());
-			tPlate.addReplaceValue("@PRODUCT@",product );
-			
-			
-			
+			tPlate.addReplaceValue("@PRODUCT@",product );	
+			tPlate.addReplaceValue("Copyright ", "Copyright &copy ");
+			tPlate.addReplaceValue("@MERCHANTCONTACT@", merchant);
 			break;
 		}
 
