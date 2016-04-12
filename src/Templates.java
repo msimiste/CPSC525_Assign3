@@ -28,7 +28,7 @@ public class Templates {
 		templates[7] = new Template("", "", "", "", "Template7_Paypal.html", 7,
 				"Paypal Attack");
 		templates[8] = new Template("", "", "", "", "Template8_MLB.html", 8,
-				"temp");
+				"MLB Attack");
 		templates[9] = new Template("", "", "", "", "Template1_Robin.html", 9,
 				"temp");
 		templates[10] = new Template("", "", "", "", "Template1_Robin.html",

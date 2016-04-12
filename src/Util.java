@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -46,9 +48,9 @@ public class Util {
 			String rec = "@RECIVER@";
 			String snd = "@SENDER@";
 			String date = "@CURRENTDATE@";
-			Date dt = new Date();
-			SimpleDateFormat fmt = new SimpleDateFormat("MMMM dd, YYYY hh:mm a");
-			String replaceDate = fmt.format(dt);
+			//Date dt = new Date();
+			//SimpleDateFormat fmt = new SimpleDateFormat("MMMM dd, YYYY hh:mm a");
+			String replaceDate = getDate(1);//fmt.format(dt);
 
 
 			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
@@ -80,6 +82,7 @@ public class Util {
 			recName = format.format(date);
 			changeHrefs(d);
 			String temp = d.toString();
+			temp = replaceValues(temp,t);
 			temp = temp.replace(oldStr, recName);
 			arr = temp.getBytes();
 			outStream.write(arr);
@@ -155,6 +158,20 @@ public class Util {
 		}
 		
 		case 7:{
+
+			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
+			changeHrefs(d);
+			String temp = d.toString();
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
+			
+			
+			arr = temp.getBytes();
+			outStream.write(arr);
 			break;
 		}
 		
@@ -175,6 +192,19 @@ public class Util {
 		outStream.close();
 		return outfile;
 	}
+	
+	public String getDate(int n){
+		String arr[] = new String [3];
+		SimpleDateFormat fmt = new SimpleDateFormat("MMMM dd, yyyy hh:mm a");
+		Date nowDate = new Date();
+		arr[1] = fmt.format(nowDate);
+		fmt = new SimpleDateFormat("MMMM YYYY");
+		arr[0] = fmt.format(nowDate);
+		fmt = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss 'GMT'Z ");
+		arr[2] = fmt.format(nowDate);
+		return arr[n];
+		
+	}
 
 	private void changeHrefs(Document doc) {
 		Elements elinks = doc.select("a[href]");
@@ -183,6 +213,17 @@ public class Util {
 			link.attr("oncontextmenu",
 					"window.location='GOTCHA.html';return false");
 		}
+	}
+	
+	private String replaceValues(String temp, Template t){
+		
+		for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+			String toReplace = val.getKey();
+			String replacement = val.getValue();
+			
+			temp = temp.replace(toReplace, replacement);
+		}
+		return temp;
 	}
 
 	private File makeFileAndDir(String path, String fileName) {
