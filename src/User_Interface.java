@@ -89,6 +89,15 @@ public class User_Interface {
 	public void askGender() {
 		System.out.println("Reciever's Gender? (F=female, M=male): ");
 	}
+	
+	public void askPrice(){
+		System.out.println("Please enter a price(format = xx.xx): ");
+	}
+	
+	public void askMerchant(){
+		System.out.println("Please enter a Merchant: ");
+	}
+	
 
 	public void openBrowser(String url) {
 

@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.Scanner;
 
 public class Attack {
 
@@ -61,6 +62,21 @@ public class Attack {
 		}
 
 		case 7: {
+			Scanner in = new Scanner(System.in);
+			System.out.print("Enter Receiver's Email: ");
+			String recEmail = in.nextLine();
+			System.out.print("Enter Merchant Name: ");
+			String merchant = in.nextLine();
+			System.out.println("Enter Price: ");
+			String price = in.nextLine();
+			System.out.println("Enter Currency(ie USD or CAD etc): ");
+			String currency = in.nextLine();
+			//SimpleDateFormat fmt = new SimpleDateFormat();
+			tPlate.setRecEmail(recEmail);
+			tPlate.addReplaceValue("@MERCHANT@", merchant);
+			tPlate.addReplaceValue("@PRICE@",price);
+			tPlate.addReplaceValue("@CURRENCY@",currency);
+			
 			break;
 		}
 

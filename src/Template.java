@@ -1,3 +1,6 @@
+
+import java.util.HashMap;
+
 public class Template {
 	private String sender;
 	private String reciever;
@@ -6,6 +9,7 @@ public class Template {
 	private String name;
 	private int number;
 	private String dispName;
+	private HashMap<String,String> replaceValues = new HashMap<String,String>();
 
 	public Template(String s, String r, String sE, String rE, String n,
 			int num, String dsp) {
@@ -18,6 +22,10 @@ public class Template {
 		dispName = dsp;
 	}
 
+	
+	public void addReplaceValue(String current,String replacement){
+		replaceValues.put(current,replacement);
+	}
 	public void setSender(String s) {
 		sender = s;
 	}
@@ -70,9 +78,12 @@ public class Template {
 	public int getNumber() {
 		return number;
 	}
-
+	
 	public String getDispName() {
 		return dispName;
+	}
+	public HashMap<String,String> getReplaceValues(){
+		return replaceValues;
 	}
 
 }
