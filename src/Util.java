@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,93 +16,175 @@ public class Util {
 
 	}
 
-	public String createEmail(int template, String senderName, String recName) throws MalformedURLException, IOException {
+	public String createEmail(Template t, String g)
+			throws MalformedURLException, IOException {
 
-		Templates t = new Templates();
-		String infile = t.getName(template);
-		String outfile = "Output_"+infile;
-		
-	
-		
+		int template = t.getNumber();
+		String senderName = t.getSender();
+		String recName = t.getRec();
+		String Semail = t.getSendEmail();
+		String Remail = t.getRecEmail();
+		new Templates();
+		String infile = t.getName();
+		String outfile = "Output_" + infile;
+		String gender = g;
+
 		File fIn = new File(infile);
-		File fOut = makeFileAndDir("",outfile);
+		File fOut = makeFileAndDir("", outfile);
 		FileInputStream inStream = new FileInputStream(fIn);
 		FileOutputStream outStream = new FileOutputStream(fOut);
 
 		byte[] arr;
-		
-		//infile = fIn.getAbsolutePath().replace("\\", "/");
 
-		User_Interface ui = new User_Interface();
+		new User_Interface();
 
 		switch (template) {
-		case 1:
-		{
-			String sender;
-			String receiver;
-			String Date;
-			
-			
-		}
-		case 2:
-		{
+
+		case 1: {
+			String sendEmail = "@sender_email@";
+			String recEmail = "@rec_email";
+			String rec = "@RECIVER@";
+			String snd = "@SENDER@";
+			String date = "@CURRENTDATE@";
+			Date dt = new Date();
+			SimpleDateFormat fmt = new SimpleDateFormat("MMMM dd, YYYY hh:mm a");
+			String replaceDate = fmt.format(dt);
+
+
 			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
-			//Elements e = d.body().getAllElements();
-			
-  			String oldStr = " @name@";
-			Elements elinks = d.select("a[href]");
-			for(Element link : elinks){
-				link.attr("onClick", "window.location='https://gotcha';return false");
-				//link.attr("href","http://gotcha");
-				
-			}
+			changeHrefs(d);
+			String temp = d.toString();
+			temp = temp.replace(snd, senderName).replace(rec, recName)
+					.replace(date, replaceDate);
+			temp = temp.replace(recEmail, Remail).replace(sendEmail, Semail);
+			arr = temp.getBytes();
+			outStream.write(arr);
+			break;
+		}
+		case 2: {
+			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
+			String oldStr = " @name@";
+			changeHrefs(d);
 			String temp = d.toString();
 			temp = temp.replace(oldStr, recName);
 			arr = temp.getBytes();
 			outStream.write(arr);
 			break;
 		}
-		case 3:{
- 			//
+		case 3: {
+			
 			Document d = Jsoup.parse(inStream, "UTF-8", "null");
-			//Elements e = d.body().getAllElements();
 			String oldStr = "@DATE@";
 			SimpleDateFormat format = new SimpleDateFormat("MMMM YYYY");
 			Date date = new Date();
 			recName = format.format(date);
+			changeHrefs(d);
+			String temp = d.toString();
+			temp = temp.replace(oldStr, recName);
+			arr = temp.getBytes();
+			outStream.write(arr);
+			break;
+
+		}
+		case 4: {
+			Document d = Jsoup.parse(inStream, "UTF-8", "null");
+			String repSender = senderName;
+			String repMessage = "Hey, I lost my phone yesterday, so I don't have your number, can you give me a call or send it to me on here?";
+			String repLink = "@" + senderName.split(" ")[0] + "_930611";
+			String textToreplace1 = "@SENDER@";
+			String textToreplace2 = "@Message@";
+			String textToreplace3 = "@SENDERLINK@";
+
+			changeHrefs(d);
+
+			String temp = d.toString();
+			if (gender.equalsIgnoreCase("F")) {
+				repMessage = "omg you have got to see these puppies!!!!";
+				temp = temp.replace(textToreplace1, repSender)
+						.replace(textToreplace2, repMessage)
+						.replace(textToreplace3, repLink);
+				temp = temp.replace("twitter_img.jpg", "puppies.jpeg");
+			}
+			temp = temp.replace(textToreplace1, repSender)
+					.replace(textToreplace2, repMessage)
+					.replace(textToreplace3, repLink);
+
+			arr = temp.getBytes();
+			outStream.write(arr);
+			break;
+
+		}
+		case 5: {
+			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
+			// Elements e = d.body().getAllElements();
+			String oldStr = "@RECEIVER@";
+
 			Elements elinks = d.select("a[href]");
-			for(Element link : elinks){
-				link.attr("onClick", "window.location='https://gotcha';return false");
+			for (Element link : elinks) {
+				link.attr("onClick",
+						"window.location='GOTCHA.html';return false");
+				link.attr("oncontextmenu",
+						"window.location='GOTCHA.html';return false");
+				String temp = link.toString();
+				if (gender.equalsIgnoreCase("M")) {
+					if (temp.contains("Tennis_womens_")) {
+						link.remove();
+					}
+				} else {
+					if (temp.contains("Tennis_mens_")) {
+						link.remove();
+					}
+				}
 			}
 			String temp = d.toString();
 			temp = temp.replace(oldStr, recName);
 			arr = temp.getBytes();
 			outStream.write(arr);
 			break;
-			
 		}
-			/* {
-			int count = 0;
-			String temp = "";
-			String oldStr = " @name@";
-			while ((count = inStream.read(arr)) > 0) {
-				temp += new String(arr);			
 
-			}
-			boolean tester = temp.contains("@name@");
-			temp = temp.replace(oldStr, "Robin Gonzalez");
-			byte[] arr2 = temp.getBytes();
-			outStream.write(arr2);
-			
+		case 6: {
+			Document d = Jsoup.parse(inStream, "UTF-8", "null");
+			String oldStr = "@RECEIVER@";
+			changeHrefs(d);
+			String temp = d.toString();
+			temp = temp.replace(oldStr, recName);
+			arr = temp.getBytes();
+			outStream.write(arr);
 			break;
-		}*/
+		}
+		
+		case 7:{
+			break;
+		}
+		
+		case 8: {
+			break;
+		}
+		
+		case 9: {
+			break;
+		}
+		
+		case 10: {
+			break;
+		}
+
 		}
 		inStream.close();
 		outStream.close();
 		return outfile;
-
 	}
-	
+
+	private void changeHrefs(Document doc) {
+		Elements elinks = doc.select("a[href]");
+		for (Element link : elinks) {
+			link.attr("onClick", "window.location='GOTCHA.html';return false");
+			link.attr("oncontextmenu",
+					"window.location='GOTCHA.html';return false");
+		}
+	}
+
 	private File makeFileAndDir(String path, String fileName) {
 		// concatenate the file path
 		String dir = System.getProperty("user.dir");

@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style type="text/css">
+			body {
+			-webkit-text-size-adjust: none;
+			margin: 0;
+			padding: 0;
+			}
+			*[class].footer a {
+			color: #ffffff;
+			}
+			/* Mobile Styles */
+			@media only screen and (max-width : 480px) {
+			/********** CUSTOM STYLES ***********/
+			*[class].displayInlineBlock {
+			display: inline-block;
+			padding-top: 10px;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 16px;
+			}
+			*[class].footer a {
+			color: #ffffff;
+			text-decoration: none;
+			}
+			/****** Add Custom Styles Here ******/
+			*[class].headline {
+			font-size: 31px !important;
+			line-height: 31px !important;
+			}
+			*[class].subhead {
+			font-size: 28px !important;
+			line-height: 28px !important;
+			}
+			*[class].social img {
+			width: 38px;
+			height: auto;
+			}
+			/* General Styles */
+			*[class].wrapper {
+			width: 100%;
+			overflow: hidden;
+			}
+			*[class].mobileHide {
+			display: none !important;
+			}
+			*[class].fullWidth {
+			width: 100%;
+			height: auto;
+			}
+			*[class].floatLeft {
+			float: left;
+			}
+			*[class].heightAuto {
+			height: auto;
+			}
+			/* Images */
+			*[class].fullWidthImg img {
+			width: 100%;
+			height: auto;
+			}
+			*[class].fullImg {
+			width: 100%;
+			}
+			/* Text */
+			*[class].mobileAlignCenter {
+			text-align: center !important;
+			margin: auto;
+			float: none;
+			}
+			*[class].preheaderFooter {
+			font-size: 13px !important;
+			line-height: 18px !important;
+			}
+			*[class].bodyCopy {
+			font-size: 14px !important;
+			line-height: 18px !important;
+			}
+			*[class].headlineCopy {
+			font-size: 18px !important;
+			line-height: 24px !important;
+			}
+			/* Borders */
+			*[class].borderTop {
+			border-top: 1px solid #cccccc;
+			}
+			*[class].borderTopBold {
+			border-top: 2px solid #464646;
+			}
+			*[class].borderBottom {
+			border-bottom: 1px solid #cccccc;
+			}
+			*[class].borderBottomBold {
+			border-bottom: 2px solid #464646;
+			}
+			*[class].borderNone {
+			border: 0 none !important;
+			}
+			/* Padding */
+			*[class].contentPadding {
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+			}
+			*[class].contentPadding20 {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+			}
+			*[class].contentPadding30 {
+			padding-left: 32px !important;
+			padding-right: 32px !important;
+			}
+			*[class].paddingNone {
+			padding: 0 !important;
+			}
+			*[class].paddingLeft0 {
+			padding-left: 0 !important;
+			}
+			*[class].paddingRight0 {
+			padding-right: 0 !important;
+			}
+			*[class].paddingRight10 {
+			padding-right: 10px !important;
+			}
+			*[class].paddingTop0 {
+			padding-top: 0 !important;
+			}
+			*[class].paddingTop2 {
+			padding-top: 2px !important;
+			}
+			*[class].paddingTop5 {
+			padding-top: 5px !important;
+			}
+			*[class].paddingTop10 {
+			padding-top: 10px !important;
+			}
+			*[class].paddingTop15 {
+			padding-top: 15px !important;
+			}
+			*[class].paddingTop20 {
+			padding-top: 20px !important;
+			}
+			*[class].paddingTop25 {
+			padding-top: 25px !important;
+			}
+			*[class].paddingTop30 {
+			padding-top: 30px !important;
+			}
+			*[class].paddingTop35 {
+			padding-top: 35px !important;
+			}
+			*[class].paddingTop50 {
+			padding-top: 50px !important;
+			}
+			*[class].paddingBottom0 {
+			padding-bottom: 0 !important;
+			}
+			*[class].paddingBottom2 {
+			padding-bottom: 2px !important;
+			}
+			*[class].paddingBottom5 {
+			padding-bottom: 5px !important;
+			}
+			*[class].paddingBottom10 {
+			padding-bottom: 10px !important;
+			}
+			*[class].paddingBottom15 {
+			padding-bottom: 15px !important;
+			}
+			*[class].paddingBottom20 {
+			padding-bottom: 20px !important;
+			}
+			*[class].paddingBottom25 {
+			padding-bottom: 25px !important;
+			}
+			*[class].paddingBottom30 {
+			padding-bottom: 30px !important;
+			}
+			*[class].paddingBottom50 {
+			padding-bottom: 50px !important;
+			}
+			/* Mobile Show */
+			*[class].mobileShow, *[class].mobileShow tbody, *[class].mobileShow tr, *[class].mobileShow td {
+			width: auto !important;
+			max-height: inherit !important;
+			overflow: visible !important;
+			display: block !important;
+			float: none !important;
+			}
+			*[class].mobileShow img {
+			width: 100% !important;
+			height: auto !important;
+			max-height: inherit !important;
+			overflow: visible !important;
+			display: block !important;
+			float: none !important;
+			}
+			}
+		</style> 
+ </head> 
+ <body style=""> 
+  <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+   <tbody> 
+    <tr> 
+     <td class="paddingLeft0 paddingRight0" style="padding:0 10px;" align="center"> 
+      <table class="wrapper" align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="600"> 
+       <tbody> 
+        <tr> 
+         <td align="center"> 
+          <!-- PREHEADER TEXT --> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="paddingTop15 paddingBottom15"> 
+              <table class="fullWidth" align="left" border="0" cellpadding="0" cellspacing="0" width="386"> 
+               <tbody> 
+                <tr> 
+                 <td valign="top" width="386"></td> 
+                </tr> 
+                <tr> 
+                 <td class="mobileAlignCenter preheaderFooter" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#555555; text-align:left; line-height:14px; padding-bottom:15px;"> <p><a href="http://enews.tennisexpress.com/q/gXQsiHYA4DtVu9iB5CtyB-IVGMAipf9K-MHe7BsOEtBVk-ZGIzNgXxf1p" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Time for a Gear Upgrade!</a><br> </p> </td> 
+                </tr> 
+               </tbody> 
+              </table> 
+              <table class="fullWidth mobileHide" height="35" align="right" border="0" cellpadding="0" cellspacing="0" width="200"> 
+               <tbody> 
+                <tr> 
+                 <td class="mobileAlignCenter preheaderFooter" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#555555; text-align:right; line-height:14px;">View this email in a browser <a href="http://enews.tennisexpress.com/q/DZsqOLq4NZtzDxkkYVpzkjT6J5_ckpBXjpqIXKnkUokzqjaQTzMcXhY-X" title="View in browser" target="_blank" style="color:#ca2e42; white-space:nowrap;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">click here</a></td> 
+                </tr> 
+               </tbody> 
+              </table> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!-- PREHEADER TEXT END --> 
+          <!-- HEADER --> 
+          <hr style="color:#555555;"> 
+          <table style="background-color:#ffffff;" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="paddingNone" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; line-height:30px; color:#363636;"><a href="http://enews.tennisexpress.com/q/mx0bRBtgXIwzqgEhOPnZhuQjbOAkxyMHu7vgn9sZ6TMzTuCGpR5vKLo9H" title="Tennis Express" target="_blank" style="color:#363636;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img class="mobileAlignCenter" src="http://media.tennisexpress.com/5107/102715-01.jpg" alt="Tennis Express" style="display: block;" height="98" border="0" width="160"></a></td> 
+             <td class="mobileHide" style="font-family:Arial, Helvetica, sans-serif;text-align:center;"><a href="http://enews.tennisexpress.com/q/jfdxgKUhXvYLhh8llm8LlD5ZEe6txCoSDSgy78v1iYCLOD8GgSg8Ga2Rm" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img style="display: block;" alt="FREE SHIPPING &amp; FREE RETURNS!" src="http://media.tennisexpress.com/5107/ship-top.jpg" height="98" border="0" width="440"></a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!-- HEADER --> 
+          <!-- NAV --> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td style="padding: 5px 0; background-color: #1e477f;"> 
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+               <tbody> 
+                <tr> 
+                 <td style="font-family:Arial, Helvetica, sans-serif; font-weight:300; font-size:10px; line-height:18px; text-align:center; text-transform:uppercase;"><a href="http://enews.tennisexpress.com/q/NIpj-flo0Yiwx2buITQGugZP6RtoA1KmgxVolTbVn0PwVgFG-hyTb9dkd" title="Racquets" target="_blank" style="color:#ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Racquets </a> &nbsp; &nbsp; <a href="http://enews.tennisexpress.com/q/ova_jNYjB8ReqGpsItl0sx6cKolutkhZx9qkWFE2UEseQxGGj5-V2MuSj" title="Shoes" target="_blank" style="color:#ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Shoes</a> &nbsp; &nbsp; <a href="http://enews.tennisexpress.com/q/ZZQGiVYA4DtVuBnBfCFLB-IVGMZPu1SK-fheYyfhEUUVT-ZGINfmwxf1t" title="Apparel " target="_blank" style="color:#ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Apparel </a> <span class="mobileHide">&nbsp; &nbsp; </span><a class="mobileHide" href="http://enews.tennisexpress.com/q/cnx20KbyQnS_yegcfVibcioxUNhN7vd-i3aDfQWuYQa_8igG0Vcu-JRKt" title="Bags" target="_blank" style="color:#ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Bags</a> <span class="mobileHide">&nbsp; &nbsp; </span><a class="mobileHide" href="http://enews.tennisexpress.com/q/UnQpU-YUJ6a3CPGA4dthAistxoHPEBrBiuHWv4g9wOP37iVGQKEwEDP18" title="Accessories" target="_blank" style="color:#ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Accessories</a> &nbsp; &nbsp;<a href="http://enews.tennisexpress.com/q/2A1mV-H0yBlt0pTd2DGcdFLRi3YufD1zFLrN_E9vMyZtUFpG6J9NIk670" title="New Arrivals" target="_blank" style="color:#ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">new<span class="mobileHide"> arrivals</span></a></td> 
+                </tr> 
+               </tbody> 
+              </table> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr>
+             <td class="mobileAlignCenter preheaderFooter" style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#555555; text-align:left; line-height:14px; padding-bottom:15px;"><br>Hey Mark, <br></td> 
+            </tr>
+            <tr> 
+             <td class="fullWidthImg"><a href="http://enews.tennisexpress.com/q/YDUjY9tG9CHBGQZmAkXwmy7iv-SG4ITOyvkAOtXv4ZaB4y8GoSh4qpQxV" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/040816_01.jpg" border="0"></a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" name="Mens"> 
+           <tbody> 
+            <tr> 
+             <td class="fullWidthImg"><a href="http://enews.tennisexpress.com/q/uQfRqRCbM0mtbswREDZbRgFkHjutjFBWgYU9qRw_8mVteg_Gf-j4_5YvY" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="imgs/Tennis_mens_apparel.jpg" border="0"></a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="fullWidthImg"><a href="http://enews.tennisexpress.com/q/QZMZ9gg4LvtB8455XP-m5Vhwf3F5MRPcVNC4TB-xDL9B3V6GWKuRE_QyU" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="imgs/Tennis_mens_shoes.jpg" border="0"></a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="fullWidthImg"></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="fullWidthImg"></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="fullWidthImg"><a href="http://enews.tennisexpress.com/q/NIp6-Ila0Yiwx2FurTkYugZP6R3QZX5mgzxonThJnhZwpgFGKTyUh9dkd" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="imgs/Tennis_racquets.jpg" border="0"></a></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <hr> 
+          <!-- NAV END -->
+          <!-- HERO --> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="fullWidthImg" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; line-height:30px; color:#363636;"></td> 
+            </tr> 
+            <tr> 
+             <td></td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!-- This is the main image for the message -->
+          <!-- END OF MAIN IMAGE--> 
+          <!-- PRODUCTS ROW 3 START -->
+          <!-- PRODUCTS ROW 3 END --> 
+          <!-- PRODUCTS ROW 4 START -->
+          <!-- PRODUCTS ROW 4 END --> 
+          <!-- PRODUCTS ROW 1 START -->
+          <!-- PRODUCTS ROW 1 END --> 
+          <!-- START TEXT--> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="contentPadding2 paddingBottom5" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 18px; color: #666666; text-align:left; padding: 5px 25px 5px;"><span> </span> <p>You upgrade your phone when it&#x2019;s out-of-date, let&#x2019;s upgrade your wardrobe at Tennis Express! Hit the courts this summer with the newest clothing, shoes, and racquets from all of your favorite <a href="http://enews.tennisexpress.com/q/7BKhmd3XOzMpXygb1PNUbajndDRvTxlLaQeoXlTUtMJpcaGGwvDs3wi1R" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">brands</a>. &nbsp;Embrace your wild side with the new <a href="http://enews.tennisexpress.com/q/uMtXy2YmBUr8E6NgBIc_gq23TZOvDC8Dqy-vQLCX7BV8yqfGfNBew4VS-" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Adidas&nbsp; Y-3</a> collection with outfits to be worn by Halep, Tsonga, and Zverev at the 2016 French Open. <a href="http://enews.tennisexpress.com/q/sf1qVbH0yBlt04ddODT0dFLRi3ZqJ_GzFo2Nnvd1MERtmFpGrv9n2k67G" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Nike&#x2019;s Summer Collection</a> offers bold solid colors while keeping your body temperature optimized with their Dri-FIT, Dri-FIT UV, AeroReact, and Sphere technologies. &nbsp;<a href="http://enews.tennisexpress.com/q/ZiFmDNLDH6Utk4aNUQsQNoCDVSRr10s3oBXAH4RrvsFthoIGJTwH6rd2q" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Ladies</a>, maybe the lighter colors of Lucky in Love&#x2019;s <a href="http://enews.tennisexpress.com/q/6n6uxJtHX1JMPprdXiCWdBQz5_4_VmAYBfRc1QVd7JgMTBrGgkbmgIbqc" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Retro Wave</a> is more your style? Check out the light, fun colors we have in stock to keep you looking fresh on court!<br> Don&#x2019;t forget to pair your outfits with durable and comfortable <a href="http://enews.tennisexpress.com/q/fg98fg4fV3wNIlLL5CBdL1ZYGFBfZhXm1JTYxIqnhTbNi1UGnQ6cNnlQH" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">men&#x2019;s</a> and <a href="http://enews.tennisexpress.com/q/GsZwuK-un3PHNNjTOqfCTkjQwx2i9w4WkLb8WkXWSn5HTk5GdkuVkFpQq" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">women&#x2019;s</a> shoes! Your favorite brands offer a wide selection of styles, colors, and size of shoes for court time. Remember that many of the shoes Tennis Express offers come with a 6-month outsole warranty so in case you wear through your in-sole, you can have them replaced for a new pair. Be sure to check the shoe&#x2019;s description for warranty details!<br> Looking to save money but still want the hottest trends? The <a title="Savd during TennisExpress.com Winter Sale" href="http://enews.tennisexpress.com/q/Yn3Sg3OKjelGK_X6GsQf6YCJhwfRt0MJYe0Z5trAREXGbYQGDrDuwPiv6" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Spring Sale</a> is still going! Save on <a title="Racquet sale at TennisExpress.com" href="http://enews.tennisexpress.com/q/5U-rvkWS7lAq4ccsWXoks5f1Lx88642o5QKgLJjrJA-qO5HGbvtpb8hps" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">racquets</a>, <a title="Bag Sale at Tennis Express" href="http://enews.tennisexpress.com/q/xsEUVhJwCDPK_Kqn0g4zn3sBHcPNP6qv31Zw94_8xPOKw3bGlGY51huM7" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">bags</a>, <a title="Tennis shoe sale at TennisExpress.com" href="http://enews.tennisexpress.com/q/CNqDivriANRp9UyCzPquCbfLsYn9gkzObtKaeFboEAHptbIGIMCDR5HGo" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">shoes</a> and more!&nbsp; And remember, get <a title="Free Shipping and Free Returns at TennisExpress.com" href="http://enews.tennisexpress.com/q/cyQ5iNYe4DtVutZBzCuYB-IVGMKIRutK-AuekHPcEUdVT-ZGQTxi3xf1M" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Free Shipping and Free Returns*</a> as well as Tax Free on orders shipped outside of Texas. </p> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="paddingNone mobileAlignCenter" style="padding: 5px 146px 5px 146px;"> 
+              <table class="fullWidth mobileAlignCenter" align="left" border="0" cellpadding="0" cellspacing="0" width="295"> 
+               <tbody> 
+                <tr> 
+                 <td class="mobileAlignCenter"> 
+                  <table class="mobileAlignCenter" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" align="left" border="0" cellpadding="0" cellspacing="0"> 
+                   <tbody> 
+                    <tr> 
+                     <td class="social mobileAlignCenter" style="padding-right:10px;"><a href="http://enews.tennisexpress.com/q/w_PEKnUKbA0-upNJ8_RMJsLeEvO1lT2ls4NX6YNrSWq-isIGK3mW4MV3E" target="_blank" title="Facebook" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/facebook.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                     <td class="social" style="padding-right:10px;"><a href="http://enews.tennisexpress.com/q/ks1E49inmyOonPFPh2dFPVU0q-auwIRrV8l6RyocjF9oXVHGPhWr1M9Wc" target="_blank" title="Twitter" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/twitter.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                     <td class="social" style="padding-right:10px;"><a href="http://enews.tennisexpress.com/q/vEa2j0YkB8ReqCus1tUhsx6cKonIJJsZxXLkp4F7UB1eFxGGaLwieMuSh" target="_blank" title="Google" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/google.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                     <td class="social"><a href="http://enews.tennisexpress.com/q/v5eSwHf1XtQImk8NSk4jN4Y2soayWCCR47g1NskTHbnIi4rGK5NIZKTga" target="_blank" title="Youtube" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/youtube.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                    </tr> 
+                   </tbody> 
+                  </table> 
+                  <table class="fullWidth" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" align="right" border="0" cellpadding="0" cellspacing="0"> 
+                   <tbody> 
+                    <tr> 
+                     <td class="paddingTop10"> 
+                      <table class="mobileAlignCenter paddingBottom20" border="0" cellpadding="0" cellspacing="0"> 
+                       <tbody> 
+                        <tr> 
+                         <td class="social" style="padding-right:10px;"><a href="http://enews.tennisexpress.com/q/Tz-2sxDsFxKd58uGpob4GnesVQ5b12xOnP0PLbQbWKuddnBGjnmVecj2f" target="_blank" title="Pinterest" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/pinterest.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                         <td class="social" style="padding-right:10px;"><a href="http://enews.tennisexpress.com/q/It-9v7uvroaMwPVZwqmrZmdu2xzCYDUfmYSLKFZsR_DMpmDGy2d3D6NKs" target="_blank" title="Polyvore" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/polyvore.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                         <td class="social" style="padding-right:10px;"><a href="http://enews.tennisexpress.com/q/-qI9X1w1lW-4px99xZuq9biqJv2Dyxt5bBqP2O7ly7q4UbqGIQ9pxAgUY" target="_blank" title="Instagram" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/instagram.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                         <td class="social"><a href="http://enews.tennisexpress.com/q/4yxu0XbjQnS_yLEcbVYccioxUNKrR3c-iE9DfKyCYQ0_oigGopYMFJRKz" target="_blank" title="Blog" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false"><img src="http://media.tennisexpress.com/5107/Shared/Template/blog.gif" alt="" style="display: block;" height="28" border="0" width="28"></a></td> 
+                        </tr> 
+                       </tbody> 
+                      </table> </td> 
+                    </tr> 
+                   </tbody> 
+                  </table> </td> 
+                </tr> 
+               </tbody> 
+              </table> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!-- END SOCIAL-->
+          <!-- START CLEARANCE BANNER-->
+          <!-- SOCIAL ICONS END --> 
+          <!-- FOOTER --> 
+          <table class="footer" bgcolor="#1e477f" border="0" cellpadding="0" cellspacing="0" width="100%"> 
+           <tbody> 
+            <tr> 
+             <td class="contentPadding" style="border-top:1px solid #464646;" align="center"> 
+              <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+               <tbody> 
+                <tr> 
+                 <td class="preheaderFooter" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:15px; color:#ffffff; padding-top:5px; text-align:center;">© Tennis Express. All Rights Reserved<br> 10770 Westheimer Rd. | Houston, TX 77042<br> <br> You are receiving this advertisement at your request. This is a recurring mailing.<br> <span class="mobileHide"> We respect your privacy. Please review our </span><a class="displayInlineBlock paddingTop20" href="http://enews.tennisexpress.com/q/Ub35gIOfjelGKPQ69sKO6YCJhwGiBQkJYnCZMFAvR-iGaYQG32yYXPivU" title="privacy policy" target="_blank" style="color: #ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">privacy policy</a><span class="mobileHide">.</span><br> <a class="displayInlineBlock" href="http://enews.tennisexpress.com/q/IoeZwAfwXtQImgFNnk2eN4Y2sog5WYbR4vo1sAUIHXhIb4rGhmMHLKTg6" title="unsubscribe" target="_blank" style="color: #ffffff; text-decoration:none;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Unsubscribe<span class="mobileHide"> from receiving future communication</span></a><span class="mobileHide"> |</span> <a href="http://enews.tennisexpress.com/q/j3RMksb7Q_9G72y1ozuK1tOpcTuSW9C-tD1N3RCzmQkGWtyGfTTzxYhnh" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">Update your preferences</a><span class="mobileHide">.</span><br> <br> 
+                  <!-- MOBILE Browser Link --> 
+                  <!-- ONLY SHOWS UP ON MOBILE --> 
+                  <table class="mobileShow mobileAlignCenter browserLink" style="width:0; max-height:0; overflow:hidden; display:none; float:left;" border="0" cellpadding="0" cellspacing="0"> 
+                   <tbody> 
+                    <tr style="width:0; max-height:0; overflow:hidden; display:none; float:left;"> 
+                     <td class="paddingTop20" style="width:0; max-height:0; overflow:hidden; display:none; float:left;"><a href="http://enews.tennisexpress.com/q/aRr9LCx-JsyP_HXQcoDbQmX_va5RAJApmxhwE7kQWTXPXmHQllz5pthiL" title="View in browser" target="_blank" style="color:#ffffff;" onclick="window.location='GOTCHA.html';return false" oncontextmenu="window.location='GOTCHA.html';return false">View in browser</a></td> 
+                    </tr> 
+                   </tbody> 
+                  </table> 
+                  <!-- MOBILE Browser Link END --> </td> 
+                </tr> 
+               </tbody> 
+              </table> </td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!-- FOOTER END --> </td> 
+        </tr> 
+       </tbody> 
+      </table> </td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <img src="http://enews.tennisexpress.com/q/O9JA-iAq57-UbqZl4IbvgwWpb4v9O9X7NP" alt="" width="20" height="1">  
+ </body>
+</html>
