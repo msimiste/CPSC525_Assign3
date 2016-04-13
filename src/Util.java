@@ -178,10 +178,42 @@ public class Util {
 		}
 		
 		case 8: {
+			
+			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
+			changeHrefs(d);
+			String temp = d.toString();
+			
+			//replaceValues(temp,t);
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
+			
+			
+			arr = temp.getBytes();
+			outStream.write(arr);
 			break;
+			
 		}
 		
 		case 9: {
+			Document d = Jsoup.parse(inStream, "UTF-8", "null");
+			changeHrefs(d);
+			String temp = d.toString();
+			
+			//replaceValues(temp,t);
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
+			
+			
+			arr = temp.getBytes();
+			outStream.write(arr);
 			break;
 		}
 		
@@ -196,7 +228,7 @@ public class Util {
 	}
 	
 	public String getDate(int n){
-		String arr[] = new String [3];
+		String arr[] = new String [4];
 		SimpleDateFormat fmt = new SimpleDateFormat("MMMM dd, yyyy hh:mm a");
 		Date nowDate = new Date();
 		arr[1] = fmt.format(nowDate);
@@ -204,6 +236,8 @@ public class Util {
 		arr[0] = fmt.format(nowDate);
 		fmt = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss 'GMT'Z ");
 		arr[2] = fmt.format(nowDate);
+		fmt = new SimpleDateFormat("YYYY");
+		arr[3] = fmt.format(nowDate);		
 		return arr[n];
 		
 	}

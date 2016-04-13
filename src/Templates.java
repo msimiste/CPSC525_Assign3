@@ -29,8 +29,8 @@ public class Templates {
 				"Paypal Attack");
 		templates[8] = new Template("", "", "", "", "Template8_MLB.html", 8,
 				"MLB Attack");
-		templates[9] = new Template("", "", "", "", "Template1_Robin.html", 9,
-				"temp");
+		templates[9] = new Template("", "", "", "", "Template9_FullTiltPoker.html", 9,
+				"Full Tilt Poker Attack");
 		templates[10] = new Template("", "", "", "", "Template1_Robin.html",
 				10, "temp");
 	}

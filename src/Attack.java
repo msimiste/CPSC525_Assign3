@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -104,10 +105,49 @@ public class Attack {
 		}
 
 		case 8: {
+			
+			Scanner in = new Scanner(System.in);
+			System.out.print("Enter Receiver's Email: ");
+			String recEmail = in.nextLine();
+			System.out.print("Enter Sender's Email: ");
+			String sendMail = in.nextLine();
+			System.out.print("Enter a message from Sender: ");
+			String senderMessage = in.nextLine();
+			System.out.print("Enter Sender's Name: ");
+			String senderName = in.nextLine(); 
+			String curDate = util.getDate(1); 			
+			String year = util.getDate(3);
+			
+			tPlate.setRecEmail(recEmail);
+			tPlate.setSendEmail(sendMail);
+			tPlate.setSender(senderName);
+			tPlate.addReplaceValue("@DATE@", curDate);
+			tPlate.addReplaceValue("@YEAR@", year);
+			tPlate.addReplaceValue("@YR@", year.substring(2));
+			tPlate.addReplaceValue("@SENDERMESSAGE@",senderMessage);
+			tPlate.addReplaceValue("@SENDER@", tPlate.getSender());
+			tPlate.addReplaceValue("@RECEIVEREMAIL@",tPlate.getRecEmail());
 			break;
 		}
 
 		case 9: {
+			
+			Scanner in = new Scanner(System.in);
+			System.out.print("Enter Receiver's Email: ");
+			String recEmail = in.nextLine();
+			System.out.print("Enter an amount for the free gift:  ");
+			String amount = in.nextLine();
+			String curDate = util.getDate(1);
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.DAY_OF_MONTH, 7);
+			String endDate = cal.getTime().toString(); 
+			
+			tPlate.setRecEmail(recEmail);
+			tPlate.addReplaceValue("@CURRENTDATE@", curDate);
+			tPlate.addReplaceValue("@AMOUNT@", amount);
+			tPlate.addReplaceValue("@OFFERENDDATE@", endDate);
+			tPlate.addReplaceValue("@RECEIVEREMAIL@",tPlate.getRecEmail());
+			tPlate.addReplaceValue("@RECEIVER@", tPlate.getRec());
 			break;
 		}
 
