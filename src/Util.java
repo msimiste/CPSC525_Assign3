@@ -218,6 +218,22 @@ public class Util {
 		}
 		
 		case 10: {
+			Document d = Jsoup.parse(inStream, "UTF-8", "null");
+			changeHrefs(d);
+			String temp = d.toString();
+			
+			//replaceValues(temp,t);
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
+			
+			
+			arr = temp.getBytes();
+			outStream.write(arr);
+			
 			break;
 		}
 

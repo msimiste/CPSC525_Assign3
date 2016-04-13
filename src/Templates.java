@@ -31,7 +31,7 @@ public class Templates {
 				"MLB Attack");
 		templates[9] = new Template("", "", "", "", "Template9_FullTiltPoker.html", 9,
 				"Full Tilt Poker Attack");
-		templates[10] = new Template("", "", "", "", "Template1_Robin.html",
-				10, "temp");
+		templates[10] = new Template("", "", "", "", "Template10_Facebook_Deactivation.html",
+				10, "Facebook Deactivation");
 	}
 }

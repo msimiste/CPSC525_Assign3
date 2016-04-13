@@ -152,6 +152,20 @@ public class Attack {
 		}
 
 		case 10: {
+			
+			Scanner in = new Scanner(System.in);
+			System.out.print("Enter Receiver's Email: ");
+			String recEmail = in.nextLine();
+			String curDate = util.getDate(1);
+						
+			 
+			
+			tPlate.setRecEmail(recEmail);
+			tPlate.addReplaceValue("@DATE@", curDate);
+			tPlate.addReplaceValue("@RECEIVEREMAIL@",tPlate.getRecEmail());
+			tPlate.addReplaceValue("@RECEIVER@", tPlate.getRec());
+			
+			
 			break;
 		}
 		}
