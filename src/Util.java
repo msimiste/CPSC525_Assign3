@@ -118,9 +118,11 @@ public class Util {
 
 		}
 		case 5: {
+			
+			
 			Document d = Jsoup.parse(inStream, "iso-8859-1", "null");
 			// Elements e = d.body().getAllElements();
-			String oldStr = "@RECEIVER@";
+			
 
 			Elements elinks = d.select("a[href]");
 			for (Element link : elinks) {
@@ -140,7 +142,14 @@ public class Util {
 				}
 			}
 			String temp = d.toString();
-			temp = temp.replace(oldStr, recName);
+			//temp = temp.replace(oldStr, recName);
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
+			
 			arr = temp.getBytes();
 			outStream.write(arr);
 			break;

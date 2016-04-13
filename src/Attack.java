@@ -12,9 +12,9 @@ public class Attack {
 	private User_Interface ui = new User_Interface();
 	private Util util = new Util();
 
-	public Attack(Template t, String g) {
+	public Attack(Template t) {
 		tPlate = t;
-		gender = g;
+		//gender = g;
 	}
 
 	public void launchAttack() throws MalformedURLException, IOException {
@@ -24,6 +24,14 @@ public class Attack {
 		String attackFile = util.createEmail(tPlate, gender);
 		ui.openBrowser(attackFile);
 
+	}
+	public String getGender(){
+		return gender;
+	}
+	
+	public void setGender(String g){
+		gender = g;
+		
 	}
 
 	private void getMoreInfo(int i) {
@@ -39,6 +47,18 @@ public class Attack {
 			break;
 		}
 		case 2: {
+			Scanner in = new Scanner(System.in);
+			ui.askReciever();
+			String receiver = in.nextLine();
+			ui.askRecEmail();
+			//System.out.print("Enter Receiver Email: ");
+			String recEmail = in.nextLine();
+			String curDate = util.getDate(1);
+			tPlate.setRecEmail(recEmail);
+			tPlate.setRec(receiver);
+			this.tPlate.addReplaceValue("@RECEIVER@", this.tPlate.getRec());
+			this.tPlate.addReplaceValue("@RECEIVEREMAIL@",this.tPlate.getRecEmail());
+			this.tPlate.addReplaceValue("@CURRENTDATE@",curDate);
 			break;
 		}
 
@@ -52,6 +72,14 @@ public class Attack {
 		}
 
 		case 4: {
+			Scanner in = new Scanner(System.in);
+			ui.askGender();
+			String gender = in.nextLine();
+			this.setGender(gender);
+			ui.askReciever();
+			String receiver = in.nextLine();
+			tPlate.setRec(receiver);
+			
 			if (gender.equalsIgnoreCase("M")) {
 				ui.askSenderFemale();
 			} else {
@@ -63,6 +91,22 @@ public class Attack {
 		}
 
 		case 5: {
+			Scanner in = new Scanner(System.in);
+		
+			ui.askReciever();
+			String receiver = in.nextLine();
+			ui.askGender();
+			String g = in.nextLine();
+			this.setGender(g);
+			System.out.print("Enter Receiver's Email: ");
+			String recEmail = in.nextLine();
+			String curDate = util.getDate(1);
+			tPlate.setRec(receiver);
+			tPlate.setRecEmail(recEmail);
+			
+			tPlate.addReplaceValue("@RECEIVER@", tPlate.getRec());
+			tPlate.addReplaceValue("RECEIVEREMAIL@", tPlate.getRecEmail());
+			tPlate.addReplaceValue("@CURRENTDATE@", curDate);
 			break;
 		}
 

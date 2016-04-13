@@ -74,7 +74,7 @@ public class User_Interface {
 	}
 
 	public void askSendEmail() {
-		System.out.println("Sender Email: ");
+		System.out.print("Sender Email: ");
 	}
 
 	public void askReciever() {
@@ -83,19 +83,19 @@ public class User_Interface {
 	}
 
 	public void askRecEmail() {
-		System.out.println("Reciever Email: ");
+		System.out.print("Reciever Email: ");
 	}
 
 	public void askGender() {
-		System.out.println("Reciever's Gender? (F=female, M=male): ");
+		System.out.print("Reciever's Gender? (F=female, M=male): ");
 	}
 	
 	public void askPrice(){
-		System.out.println("Please enter a price(format = xx.xx): ");
+		System.out.print("Please enter a price(format = xx.xx): ");
 	}
 	
 	public void askMerchant(){
-		System.out.println("Please enter a Merchant: ");
+		System.out.print("Please enter a Merchant: ");
 	}
 	
 
