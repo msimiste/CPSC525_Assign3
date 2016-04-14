@@ -11,17 +11,23 @@ public class Attack {
 	private String gender;
 	private User_Interface ui = new User_Interface();
 	private Util util = new Util();
+	private boolean output;
 
-	public Attack(Template t) {
+	public Attack(Template t, boolean out) {
 		tPlate = t;
+		output = out;
 		//gender = g;
 	}
 
 	public void launchAttack() throws MalformedURLException, IOException {
 
 		Util util = new Util();
-		getMoreInfo(tPlate.getNumber());
-		String attackFile = util.createEmail(tPlate, gender);
+		if(output){
+			int temp = tPlate.getNumber();
+			getMoreInfo(temp);
+		}
+		
+		String attackFile = util.createEmail(tPlate,gender,output);
 		ui.openBrowser(attackFile);
 
 	}
@@ -64,11 +70,19 @@ public class Attack {
 
 		case 3: {
 			Scanner in = new Scanner(System.in);
-			System.out.print("Enter Receiver Email: ");
+			ui.askRecEmail();
 			String recEmail = in.nextLine();
+			ui.askReciever();
+			String receiver = in.nextLine();
+			String curDate = util.getDate(1);
+			
 			tPlate.setRecEmail(recEmail);
+			tPlate.setRec(receiver);
+			
 			this.tPlate.addReplaceValue("@RECEIVER@", this.tPlate.getRec());
 			this.tPlate.addReplaceValue("@RECEIVEREMAIL@",this.tPlate.getRecEmail());
+			this.tPlate.addReplaceValue("@CURRENTDATE@",curDate);
+			break;
 		}
 
 		case 4: {
@@ -78,15 +92,22 @@ public class Attack {
 			this.setGender(gender);
 			ui.askReciever();
 			String receiver = in.nextLine();
+			ui.askRecEmail();
+			String recEmail = in.nextLine();
 			tPlate.setRec(receiver);
-			
+			tPlate.setRecEmail(recEmail);
+			String curDate = util.getDate(1);
 			if (gender.equalsIgnoreCase("M")) {
 				ui.askSenderFemale();
 			} else {
 				ui.askSender();
 			}
 			String sendChoice = ui.getUserInputString();
+			
 			this.tPlate.setSender(sendChoice);
+			this.tPlate.addReplaceValue("@RECEIVER@", this.tPlate.getRec());
+			this.tPlate.addReplaceValue("@RECEIVEREMAIL@",this.tPlate.getRecEmail());
+			this.tPlate.addReplaceValue("@CURRENTDATE@",curDate);
 			break;
 		}
 
@@ -111,6 +132,21 @@ public class Attack {
 		}
 
 		case 6: {
+			Scanner in = new Scanner(System.in);
+			
+			ui.askReciever();
+			String receiver = in.nextLine();
+			ui.askRecEmail();
+			String recEmail = in.nextLine();
+			
+			tPlate.setRec(receiver);
+			tPlate.setRecEmail(recEmail);
+			String curDate = util.getDate(1);		
+			
+			
+			this.tPlate.addReplaceValue("@RECEIVER@", this.tPlate.getRec());
+			this.tPlate.addReplaceValue("@RECEIVEREMAIL@",this.tPlate.getRecEmail());
+			this.tPlate.addReplaceValue("@CURRENTDATE@",curDate);
 			break;
 		}
 
@@ -118,6 +154,8 @@ public class Attack {
 			Scanner in = new Scanner(System.in);
 			System.out.print("Enter Receiver's Email: ");
 			String recEmail = in.nextLine();
+			ui.askReciever();
+			String receiver = in.nextLine();
 			System.out.print("Enter Merchant Name: ");
 			String merchant = in.nextLine();
 			String merchant2 = new String(merchant);
@@ -133,6 +171,8 @@ public class Attack {
 			String date = util.getDate(2);
 			
 			tPlate.setRecEmail(recEmail);
+			tPlate.setRec(receiver);
+			
 			tPlate.addReplaceValue("@MERCHANT@", merchant2.toUpperCase());
 			tPlate.addReplaceValue("@MERCHANTWEBSITE@", merchant2.replace(" ","").toLowerCase());
 			tPlate.addReplaceValue("@PRICE@",price);
@@ -198,13 +238,17 @@ public class Attack {
 		case 10: {
 			
 			Scanner in = new Scanner(System.in);
-			System.out.print("Enter Receiver's Email: ");
+			ui.askRecEmail();
+			//System.out.print("Enter Receiver's Email: ");
 			String recEmail = in.nextLine();
+			ui.askReciever();
+			String receiver = in.nextLine();
 			String curDate = util.getDate(1);
 						
 			 
 			
 			tPlate.setRecEmail(recEmail);
+			tPlate.setRec(receiver);
 			tPlate.addReplaceValue("@DATE@", curDate);
 			tPlate.addReplaceValue("@RECEIVEREMAIL@",tPlate.getRecEmail());
 			tPlate.addReplaceValue("@RECEIVER@", tPlate.getRec());

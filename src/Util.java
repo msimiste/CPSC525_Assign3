@@ -18,7 +18,7 @@ public class Util {
 
 	}
 
-	public String createEmail(Template t, String g)
+	public String createEmail(Template t, String g, boolean output)
 			throws MalformedURLException, IOException {
 
 		int template = t.getNumber();
@@ -37,6 +37,20 @@ public class Util {
 		FileOutputStream outStream = new FileOutputStream(fOut);
 
 		byte[] arr;
+		
+		if(!(output)){
+			int c;
+			byte arr1[] = new  byte [1024];
+			
+			while((c = inStream.read(arr1))>0){
+				outStream.write(arr1);
+				
+			}
+			inStream.close();
+			outStream.close();
+			return outfile;
+			
+		}
 
 		new User_Interface();
 
@@ -68,6 +82,13 @@ public class Util {
 			String oldStr = " @name@";
 			changeHrefs(d);
 			String temp = d.toString();
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
+			
 			temp = temp.replace(oldStr, recName);
 			arr = temp.getBytes();
 			outStream.write(arr);
@@ -106,11 +127,21 @@ public class Util {
 				temp = temp.replace(textToreplace1, repSender)
 						.replace(textToreplace2, repMessage)
 						.replace(textToreplace3, repLink);
-				temp = temp.replace("twitter_img.jpg", "puppies.jpeg");
+				temp = temp.replace("twitter_img.jpg", "puppies.jpeg");				
 			}
 			temp = temp.replace(textToreplace1, repSender)
 					.replace(textToreplace2, repMessage)
 					.replace(textToreplace3, repLink);
+			if(gender.equalsIgnoreCase("m")){
+				temp = temp.replace("goo.gl/R15Ei5", "");
+			}
+			
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
 
 			arr = temp.getBytes();
 			outStream.write(arr);
@@ -157,10 +188,15 @@ public class Util {
 
 		case 6: {
 			Document d = Jsoup.parse(inStream, "UTF-8", "null");
-			String oldStr = "@RECEIVER@";
+			
 			changeHrefs(d);
 			String temp = d.toString();
-			temp = temp.replace(oldStr, recName);
+			for(Map.Entry<String, String> val : t.getReplaceValues().entrySet()){
+				String toReplace = val.getKey();
+				String replacement = val.getValue();
+				
+				temp = temp.replace(toReplace, replacement);
+			}
 			arr = temp.getBytes();
 			outStream.write(arr);
 			break;
@@ -245,6 +281,7 @@ public class Util {
 			
 			break;
 		}
+	
 
 		}
 		inStream.close();

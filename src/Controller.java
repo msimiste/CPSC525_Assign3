@@ -15,8 +15,9 @@ public class Controller {
 		
 		Template t = ui.t.getTemplate(choice);
 		
-		
-		Attack attack = new Attack(t);
+		boolean output = ui.getOutputType();
+			
+		Attack attack = new Attack(t, output);
 		attack.launchAttack();
 			
 		

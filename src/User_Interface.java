@@ -39,7 +39,24 @@ public class User_Interface {
 		}
 
 	}
-
+	
+	public boolean getOutputType() {
+		Scanner in = new Scanner (System.in);
+		String choice = "";
+		while(!((choice.equalsIgnoreCase("a"))||(choice.equalsIgnoreCase("b")))){
+			System.out.println("Enter (a) to see the Original File");
+			System.out.println("Enter (b) to Read Email");
+			System.out.print("Your choice: ");
+			choice = in.nextLine();
+		}
+		if(choice.equalsIgnoreCase("a")){
+			return false;
+		}
+		
+	
+		return true;
+	}
+	
 	public int getUserInputTemplate() {
 		Scanner in = new Scanner(System.in);
 		int temp = Integer.parseInt(in.nextLine());
@@ -121,7 +138,7 @@ public class User_Interface {
 				// Do a best guess on unix until we get a platform independent
 				// way
 				// Build a list of browsers to try, in this order.
-				String[] browsers = { "firefox", "chrome", "konqueror",
+				String[] browsers = { "firefox", "google-chrome",  "konqueror",
 						"netscape", "opera", "links", "lynx" };
 
 				// Build a command string which looks like
